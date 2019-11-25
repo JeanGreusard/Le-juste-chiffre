@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JEUX DU PLUS OU MOINS"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/colorAccent"/>
+
+    <HorizontalScrollView
+        android:id="@+id/hor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewPetit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Plus petit"
+                android:textSize="30dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewEgal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="gagné!"
+                android:textSize="30dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewGrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Plus grand"
+                android:textSize="30dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/hor"
+        android:layout_marginTop="25dp">
+
+        <Button
+            android:id="@+id/buttonGenerer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generer un nombre"
+            />
+
+        <TextView
+            android:id="@+id/textViewNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Saisir un nombre"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="votre nombre.."/>
+
+        <Button
+            android:id="@+id/buttonVerif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vérification"
+            android:background="@color/colorVert"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icone"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundebutton"
+            android:text="Buu" />
+
+    </LinearLayout>
+</RelativeLayout>
